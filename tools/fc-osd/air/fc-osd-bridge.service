@@ -1,0 +1,18 @@
+[Unit]
+Description=FC -> standard MAVLink + OSD bridge for OpenHD (MSP DisplayPort OSD, BETAFPV Pavo USB, MAVLink passthrough)
+After=local-fs.target
+Before=openhd.service
+
+[Service]
+Type=simple
+# Reads the FC on --uart (the wire that used to go to the DJI/HD VTX) and creates the virtual FC port
+# /run/fc_osd_bridge, which OpenHD uses as its FC connection (install.sh sets fc_uart_connection_type).
+# --no-menu-text: the FC menu is drawn by fc_osd_overlay.py / fc_osd_viewer.py on the ground instead of HUD messages.
+ExecStart=/usr/bin/python3 -u /usr/local/bin/fc_osd_bridge.py --uart /dev/serial0 --usb auto --out pty:/run/fc_osd_bridge --no-menu-text
+Restart=always
+RestartSec=2
+KillSignal=SIGTERM
+TimeoutStopSec=8
+
+[Install]
+WantedBy=multi-user.target

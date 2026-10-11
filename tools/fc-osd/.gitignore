@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+*_log.txt
+air_settings.backup.json

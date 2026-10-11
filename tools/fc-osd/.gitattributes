@@ -1,0 +1,5 @@
+# The scripts run on Linux: keep LF line endings even when the repo is cloned on Windows
+* text=auto eol=lf
+*.sh text eol=lf
+*.py text eol=lf
+*.service text eol=lf
