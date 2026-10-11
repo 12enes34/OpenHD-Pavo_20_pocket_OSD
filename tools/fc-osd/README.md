@@ -103,6 +103,14 @@ The overlay then starts automatically at every login.
 * **FC menu:** open it with the radio sticks as the FC manual says (Pavo: disarmed, throttle
   left + pitch up). It appears on the ground like in DJI goggles.
 
+## Phone in VR goggles (DJI-goggle style)
+
+**[FPV VR](https://github.com/12enes34/OpenHD-FPV-VR)** is a companion Android app with its own repository. It shows the OpenHD video plus
+the FC OSD and menus from this bridge in side-by-side VR on a phone in Gear VR / Cardboard-type
+goggles, with lens correction and about 6 ms decode latency. Connect the phone to the ground station by
+USB and switch on **USB tethering**; OpenHD then sends it the video and telemetry by itself.
+[Download the APK](https://github.com/12enes34/OpenHD-FPV-VR/releases/latest).
+
 ## Options
 
 Bridge (air): edit the `ExecStart=` line in `/etc/systemd/system/fc-osd-bridge.service`, then run

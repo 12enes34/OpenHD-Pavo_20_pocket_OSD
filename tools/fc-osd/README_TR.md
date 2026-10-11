@@ -87,6 +87,15 @@ OSD katmanı her oturum açılışında kendiliğinden başlar.
 * **FC menüsü:** FC kılavuzundaki çubuk hareketiyle açılır (Pavo: disarm iken gaz sol + pitch
   yukarı).
 
+## Telefonla VR gözlük (DJI gözlük gibi)
+
+**[FPV VR](https://github.com/12enes34/OpenHD-FPV-VR)**, kendi reposu olan bir Android uygulaması. OpenHD görüntüsünü, bu köprünün
+gönderdiği FC OSD'si ve menüleriyle birlikte, Gear VR / Cardboard tipi gözlüğe takılan telefonda iki göz
+için yan yana gösterir. Mercek düzeltmesi yapar; çözme gecikmesi yaklaşık 6 ms.
+
+Telefonu yer istasyonuna USB ile bağlayıp **USB paylaşımını** açman yeterli; OpenHD görüntüyü ve
+telemetriyi telefona kendisi gönderir. [APK'yı indir](https://github.com/12enes34/OpenHD-FPV-VR/releases/latest).
+
 ## Güncelleme / kaldırma
 * **Hava:**
   * Güncelleme: yeni dosyaları `/boot/fc-osd/` klasörüne koyup `sudo bash /boot/fc-osd/update.sh`
